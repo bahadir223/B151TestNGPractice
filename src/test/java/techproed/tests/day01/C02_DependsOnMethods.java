@@ -56,7 +56,7 @@ public class C02_DependsOnMethods {
     }
 
     /*
-    DependsOnMethods test methodlarını calısma sırasına karısmaz.
+    DependsOnMethods test methodlarının calısma sırasına karısmaz.
     sadece baglı olan test, baglandıgı testin sonucuna bakar
     baglandıgı test passed olmazsa, baglanan test hic calısmaz.
      */
