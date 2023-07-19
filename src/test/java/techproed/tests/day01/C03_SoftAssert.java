@@ -28,14 +28,15 @@ public class C03_SoftAssert extends TestBase {
         softAssert.assertTrue(driver.getTitle().contains("Amazon"));
 
         // Arama kutusunun erisilebilir oldugunu test edin
-        softAssert.assertTrue(driver.findElement(By.id("twotabsearchtextbox")).isEnabled());
+        softAssert.assertTrue(driver.findElement(By.id("twotabsearchtextbox")).isEnabled(),
+                "eğer bir problem çıkarsa bu mesajı verecek... ");
 
         // Arama kutusuna nutella yazıp aratın
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("nutella", Keys.ENTER);
 
         //Sonuc yazısının gorunur oldugunu test edin
         WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[1]"));
-        softAssert.assertTrue(sonucYazisi.isDisplayed());
+        softAssert.assertTrue(sonucYazisi.isDisplayed(),"eğer bir problem çıkarsa bu mesajı verecek...");
 
         //Sonuc yazısının "Nutella" icerdigini test edin
         softAssert.assertTrue(sonucYazisi.getText().contains("Nutella"),"Sonuc yazısı Nutella icermiyor");
