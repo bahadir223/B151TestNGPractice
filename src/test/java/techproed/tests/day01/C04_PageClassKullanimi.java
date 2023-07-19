@@ -17,5 +17,6 @@ public class C04_PageClassKullanimi {
     public void test01() {
         // facebook anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("facebookUrl"));
+
     }
 }
